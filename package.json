@@ -1,6 +1,6 @@
 {
   "name": "notarize-node-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js Client for Notarize.com Business API",
   "keywords": [
     "notarize.com",

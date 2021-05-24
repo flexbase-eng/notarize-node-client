@@ -1,6 +1,6 @@
-# notarize
+# notarize-node-client
 
-`notarize` is a Node/JS and TypeScript Client for
+`notarize-node-client` is a Node/JS and TypeScript Client for
 [Notarize.com](https://notarize.com) that allows you to use normal Node
 syntax to start notarizations - as opposed to writing a client based on the
 REST endpoints documented on the Notarize.com Developer portal.
