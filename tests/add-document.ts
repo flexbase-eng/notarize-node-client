@@ -1,7 +1,10 @@
 import { Notarize } from '../src/index'
 
 (async () => {
-  const client = new Notarize(process.env.NOTARIZE_API_KEY!)
+  const client = new Notarize(process.env.NOTARIZE_API_KEY!, {
+    host: process.env.NOTARIZE_HOST,
+    webhookUrl: process.env.NOTARIZE_WEBHOOK,
+  })
   console.log('creating a new transaction...')
   const one = await client.transaction.create({
     draft: true,
