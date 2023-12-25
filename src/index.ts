@@ -1,4 +1,3 @@
-import fetch from 'node-fetch'
 import path from 'path'
 import camelCaseKeys from 'camelcase-keys'
 
@@ -7,7 +6,8 @@ import { TemplateApi } from './template'
 import { TransactionApi } from './transaction'
 import { WebhookApi } from './webhook'
 
-const ClientVersion = require('../package.json').version
+import * as config from '../package.json'
+const ClientVersion = config.version
 const PROTOCOL = 'https'
 const NOTARIZE_HOST = 'api.notarize.com/v1/'
 
@@ -90,7 +90,7 @@ export class Notarize {
       }
     })
     try {
-      const payload = camelCaseKeys((await response.json()) as any, {deep: true})
+      const payload = camelCaseKeys((await response.json()), {deep: true})
       return { response, payload }
     } catch (err) {
       return { response }

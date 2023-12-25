@@ -1,5 +1,3 @@
-const delay = require('delay')
-
 import { Notarize } from '../src/index'
 
 (async () => {
@@ -44,7 +42,7 @@ import { Notarize } from '../src/index'
 
   if (one.success) {
     console.log('pausing for 10sec to detect email received...')
-    await delay(10 * 1000)
+    await new Promise(resolve => setTimeout(resolve, 10 * 1000))
     console.log('resending the email for the new transaction...')
     const two = await client.transaction.resendEmail(one.transaction!.id)
     if (two.success) {
