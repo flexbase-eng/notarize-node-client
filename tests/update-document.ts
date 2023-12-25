@@ -50,7 +50,7 @@ import { Notarize } from '../src/index'
     } else {
       console.log('Error! I was unable to pull the original document:')
       console.log(chk)
-     }
+    }
   }
 
   if (one.success) {
