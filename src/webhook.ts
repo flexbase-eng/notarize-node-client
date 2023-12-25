@@ -3,7 +3,7 @@ import snakecaseKeys from 'snakecase-keys'
 import type { Notarize, NotarizeOptions } from './'
 
 export class WebhookApi {
-  client: Notarize;
+  client: Notarize
 
   constructor(client: Notarize, options?: NotarizeOptions) {  // eslint-disable-line no-unused-vars
     this.client = client

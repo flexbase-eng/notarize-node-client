@@ -4,7 +4,7 @@ import type { Notarize, NotarizeOptions } from './'
 import type { Document } from './transaction'
 
 export class DocumentApi {
-  client: Notarize;
+  client: Notarize
 
   constructor(client: Notarize, options?: NotarizeOptions) {  // eslint-disable-line no-unused-vars
     this.client = client

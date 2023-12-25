@@ -161,7 +161,7 @@ export interface SigningDestination {
 }
 
 export class TransactionApi {
-  client: Notarize;
+  client: Notarize
 
   constructor(client: Notarize, options?: NotarizeOptions) {  // eslint-disable-line no-unused-vars
     this.client = client
@@ -269,7 +269,7 @@ export class TransactionApi {
       doc.resource = doc.resource.toString('base64')
     }
     // ...now process normally
-    const body  = snakecaseKeys(doc)
+    const body  = snakecaseKeys(doc as any)
     const resp = await this.client.fire(
       'POST',
       `transactions/${id}/documents`,

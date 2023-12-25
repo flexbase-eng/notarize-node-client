@@ -1,7 +1,7 @@
 import type { Notarize, NotarizeOptions } from './'
 
 export class TemplateApi {
-  client: Notarize;
+  client: Notarize
 
   constructor(client: Notarize, options?: NotarizeOptions) {  // eslint-disable-line no-unused-vars
     this.client = client
