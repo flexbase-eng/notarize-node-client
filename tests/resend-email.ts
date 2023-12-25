@@ -1,4 +1,6 @@
-const delay = require('delay')
+function delay(msec: number) {
+  return await new Promise(resolve => setTimeout(resolve, msec))
+}
 
 import { Notarize } from '../src/index'
 
