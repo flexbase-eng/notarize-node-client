@@ -90,7 +90,7 @@ export class Notarize {
       }
     })
     try {
-      const payload = camelCaseKeys((await response.json()) as any, {deep: true})
+      const payload = camelCaseKeys((await response.json()), {deep: true})
       return { response, payload }
     } catch (err) {
       return { response }
