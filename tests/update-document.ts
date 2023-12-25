@@ -1,7 +1,3 @@
-function delay(msec: number) {
-  return await new Promise(resolve => setTimeout(resolve, msec))
-}
-
 import { Notarize } from '../src/index'
 
 (async () => {
@@ -44,7 +40,7 @@ import { Notarize } from '../src/index'
 
   if (one.success) {
     console.log('pausing for 5sec to let service process new transaction...')
-    await delay(10 * 1000)
+    await new Promise(resolve => setTimeout(resolve, 10 * 1000))
     console.log('retrieving the same document to validate get()')
     const chk = await client.document.get(one.transaction!.id, docOne.id)
     if (chk.success && chk.document!.trackingId === null) {
