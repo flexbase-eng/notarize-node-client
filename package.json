@@ -1,6 +1,6 @@
 {
   "name": "notarize-node-client",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Node.js Client for Notarize.com Business API",
   "keywords": [
     "notarize.com",
@@ -48,7 +48,7 @@
     "@types/node": ">=10.0.0",
     "camelcase-keys": "^6.2.2",
     "node-fetch": "^2.6.1",
-    "snakecase-keys": "^4.0.2"
+    "snakecase-keys": "^5.5.0"
   },
   "scripts": {
     "ts": "ts-node -r dotenv/config",
